@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import { initializeApp } from 'firebase/app';
 
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
@@ -8,12 +8,12 @@ import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCMyV-AtuiX59tDEdsiVQJVbzwq24Hnb3E",
-  authDomain: "quasar-chat-3c992.firebaseapp.com",
-  projectId: "quasar-chat-3c992",
-  storageBucket: "quasar-chat-3c992.appspot.com",
-  messagingSenderId: "203624262350",
-  appId: "1:203624262350:web:aaa0f49ec9b592684abe9f"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
@@ -22,4 +22,3 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 export { auth, db };
-
