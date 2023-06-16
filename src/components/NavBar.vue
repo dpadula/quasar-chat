@@ -1,7 +1,15 @@
 <template>
   <q-header elevated>
     <q-toolbar>
-      <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
+      <q-btn
+        v-if="userGoogle"
+        flat
+        dense
+        round
+        icon="menu"
+        aria-label="Menu"
+        @click="toggleLeftDrawer"
+      />
 
       <q-toolbar-title> Quasar Chat </q-toolbar-title>
 
@@ -10,18 +18,24 @@
     </q-toolbar>
   </q-header>
 
-  <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+  <q-drawer v-if="userGoogle" v-model="leftDrawerOpen" show-if-above bordered>
     <q-list>
-      <q-item-label header> Essential Links </q-item-label>
+      <q-item-label header> User</q-item-label>
 
-      <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
+      <UserAvatar
+        :key="userGoogle.uid"
+        :title="userGoogle.displayName"
+        :caption="userGoogle.email"
+        :photo-u-r-l="userGoogle.photoURL"
+        :link="userGoogle.photoURL"
+      />
     </q-list>
   </q-drawer>
 </template>
 
 <script setup>
 import { ref, inject } from "vue";
-import EssentialLink from "./EssentialLink.vue";
+import UserAvatar from "./UserAvatar.vue";
 import { signInWithPopup, signOut, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../firebase";
 
@@ -32,21 +46,7 @@ const linksList = [
     icon: "school",
     link: "https://quasar.dev",
   },
-  {
-    title: "Github",
-    caption: "github.com/quasarframework",
-    icon: "code",
-    link: "https://github.com/quasarframework",
-  },
-  {
-    title: "Discord Chat Channel",
-    caption: "chat.quasar.dev",
-    icon: "chat",
-    link: "https://chat.quasar.dev",
-  },
 ];
-
-const essentialLinks = linksList;
 
 const leftDrawerOpen = ref(false);
 
