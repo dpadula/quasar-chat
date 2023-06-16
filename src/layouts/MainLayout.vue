@@ -2,13 +2,14 @@
   <q-layout view="lHh Lpr lFf">
     <NavBar></NavBar>
     <q-page-container>
+      {{ userGoogle }}
       <router-view />
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent, inject } from "vue";
 
 import NavBar from "components/NavBar.vue";
 
@@ -20,13 +21,9 @@ export default defineComponent({
   },
 
   setup() {
-    // const leftDrawerOpen = ref(false);
-
+    const userGoogle = inject("userGoogle");
     return {
-      // leftDrawerOpen,
-      // toggleLeftDrawer() {
-      //   leftDrawerOpen.value = !leftDrawerOpen.value;
-      // },
+      userGoogle,
     };
   },
 });

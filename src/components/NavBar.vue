@@ -5,8 +5,8 @@
 
       <q-toolbar-title> Quasar Chat </q-toolbar-title>
 
-      <q-btn color="accent" label="Login" @click="login" />
-      <q-btn color="positive" label="Logout" @click="logout" />
+      <q-btn v-if="!userGoogle" color="accent" label="Login" @click="login" />
+      <q-btn v-if="userGoogle" color="positive" label="Logout" @click="logout" />
     </q-toolbar>
   </q-header>
 
@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, inject } from "vue";
 import EssentialLink from "./EssentialLink.vue";
 import { signInWithPopup, signOut, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../firebase";
@@ -49,6 +49,8 @@ const linksList = [
 const essentialLinks = linksList;
 
 const leftDrawerOpen = ref(false);
+
+const userGoogle = inject("userGoogle");
 
 const toggleLeftDrawer = () => {
   leftDrawerOpen.value = !leftDrawerOpen.value;
@@ -82,7 +84,6 @@ const logout = () => {
   signOut(auth)
     .then((result) => {
       // Sign-out successful.
-      console.log("logout google :>> ");
     })
     .catch((error) => {
       console.log("error :>> ", error);
