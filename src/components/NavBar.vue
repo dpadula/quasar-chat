@@ -35,18 +35,12 @@
 
 <script setup>
 import { ref, inject } from "vue";
-import UserAvatar from "./UserAvatar.vue";
+import { useQuasar } from "quasar";
 import { signInWithPopup, signOut, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../firebase";
+import UserAvatar from "./UserAvatar.vue";
 
-const linksList = [
-  {
-    title: "Docs",
-    caption: "quasar.dev",
-    icon: "school",
-    link: "https://quasar.dev",
-  },
-];
+const $q = useQuasar();
 
 const leftDrawerOpen = ref(false);
 
@@ -57,6 +51,9 @@ const toggleLeftDrawer = () => {
 };
 const login = () => {
   const provider = new GoogleAuthProvider();
+  $q.loading.show({
+    // delay: 3000, // ms
+  });
   signInWithPopup(auth, provider)
     .then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
@@ -66,6 +63,7 @@ const login = () => {
       // const user = result.user;
       // // IdP data available using getAdditionalUserInfo(result)
       // ...
+      $q.loading.hide();
       console.log("result :>> ", result);
     })
     .catch((error) => {
@@ -77,16 +75,22 @@ const login = () => {
       // // The AuthCredential type that was used.
       // const credential = GoogleAuthProvider.credentialFromError(error);
       console.log("ERROR :>> ", error);
+      $q.loading.hide();
       // // ...
     });
 };
 const logout = () => {
+  $q.loading.show({
+    // delay: 3000, // ms
+  });
   signOut(auth)
     .then((result) => {
       // Sign-out successful.
+      $q.loading.hide();
     })
     .catch((error) => {
       console.log("error :>> ", error);
+      $q.loading.hide();
     });
 };
 </script>
