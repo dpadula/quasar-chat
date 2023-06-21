@@ -37,6 +37,7 @@ const addText = () => {
     uid: userGoogle.value.uid,
     time: Date.now(),
     displayName: userGoogle.value.displayName,
+    photoURL: userGoogle.value.photoURL,
   })
     .then(() => {
       console.log("Producir sonido");

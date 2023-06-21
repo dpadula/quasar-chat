@@ -5,6 +5,7 @@ import { db } from "../firebase";
 
 const messages = ref([]);
 const userGoogle = inject("userGoogle");
+console.log("userGoogle.photoURL :>> ", userGoogle.photoURL);
 
 const q = query(collection(db, "chats"), orderBy("time"));
 const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -16,6 +17,7 @@ const unsubscribe = onSnapshot(q, (snapshot) => {
       });
     }
   });
+  console.log("messages :>> ", messages);
 });
 </script>
 
