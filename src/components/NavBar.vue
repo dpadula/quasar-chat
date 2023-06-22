@@ -64,7 +64,6 @@ const login = () => {
       // // IdP data available using getAdditionalUserInfo(result)
       // ...
       $q.loading.hide();
-      console.log("result :>> ", result);
     })
     .catch((error) => {
       // Handle Errors here.
@@ -74,7 +73,7 @@ const login = () => {
       // const email = error.customData.email;
       // // The AuthCredential type that was used.
       // const credential = GoogleAuthProvider.credentialFromError(error);
-      console.log("ERROR :>> ", error);
+      // console.log("ERROR :>> ", error);
       $q.loading.hide();
       // // ...
     });

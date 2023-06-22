@@ -1,5 +1,5 @@
 <template>
-  <q-footer>
+  <q-footer v-if="userGoogle">
     <q-toolbar>
       <q-input
         v-model="chatInput"
@@ -12,7 +12,12 @@
         @keyup.enter="addText"
       >
         <template #append>
-          <q-icon name="send" class="cursor-pointer" @click="addText" />
+          <q-icon
+            name="send"
+            class="cursor-pointer"
+            :disable="chatInput"
+            @click="addText"
+          />
         </template>
       </q-input>
     </q-toolbar>
@@ -21,30 +26,27 @@
 
 <script setup>
 import { ref, inject } from "vue";
-import { useQuasar } from "quasar";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
-
-const $q = useQuasar();
 
 const chatInput = ref("");
 const userGoogle = inject("userGoogle");
 
 const addText = () => {
-  console.log("object :>> ", chatInput.value);
-  addDoc(collection(db, "chats"), {
-    text: chatInput.value,
-    uid: userGoogle.value.uid,
-    time: Date.now(),
-    displayName: userGoogle.value.displayName,
-    photoURL: userGoogle.value.photoURL,
-  })
-    .then(() => {
-      console.log("Producir sonido");
-      chatInput.value = "";
+  if (chatInput.value !== "") {
+    addDoc(collection(db, "chats"), {
+      text: chatInput.value,
+      uid: userGoogle.value.uid,
+      time: Date.now(),
+      displayName: userGoogle.value.displayName,
+      photoURL: userGoogle.value.photoURL,
     })
-    .catch(() => {
-      console.log("ERROR al agregar chat");
-    });
+      .then(() => {
+        chatInput.value = "";
+      })
+      .catch(() => {
+        console.log("ERROR al agregar chat");
+      });
+  }
 };
 </script>
