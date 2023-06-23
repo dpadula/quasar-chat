@@ -65,7 +65,7 @@ watchEffect((onCleanup) => {
   <q-page v-if="!userGoogle" class="flex flex-center"> <h3>Iniciar Sesión</h3></q-page>
   <q-page v-else>
     <div ref="chatBox" class="q-pa-md row justify-center items-center content-center">
-      <div class="q-pa-md col-5" style="overflow: auto">
+      <div class="q-pa-md anchoChat" style="overflow: auto">
         <template v-for="message in messages" :key="message.id">
           <q-chat-message
             :name="message.displayName"
@@ -81,12 +81,19 @@ watchEffect((onCleanup) => {
 
 <!-- Notice lang="scss" -->
 <style lang="scss">
-.borde {
-  border: 1px solid red;
-  // background-color: $grey-5;
+@media screen and (max-width: $breakpoint-xs-max) {
+  .anchoChat {
+    min-width: 105vw !important;
+  }
 }
-.verde {
-  border: 1px solid green;
-  // background-color: $grey-5;
+@media screen and (min-width: $breakpoint-sm-min) {
+  .anchoChat {
+    min-width: 90vw !important;
+  }
+}
+@media screen and (min-width: $breakpoint-md-min) {
+  .anchoChat {
+    min-width: 60vw !important;
+  }
 }
 </style>

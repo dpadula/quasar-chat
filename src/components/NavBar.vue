@@ -19,17 +19,19 @@
   </q-header>
 
   <q-drawer v-if="userGoogle" v-model="leftDrawerOpen" show-if-above bordered>
-    <q-list>
-      <q-item-label header> User</q-item-label>
-
-      <UserAvatar
-        :key="userGoogle.uid"
-        :title="userGoogle.displayName"
-        :caption="userGoogle.email"
-        :photo-u-r-l="userGoogle.photoURL"
-        :link="userGoogle.photoURL"
-      />
-    </q-list>
+    <q-img
+      class="absolute-top"
+      src="https://cdn.quasar.dev/img/material.png"
+      style="height: 150px"
+    >
+      <div class="absolute-bottom bg-transparent">
+        <q-avatar size="56px" class="q-mb-sm">
+          <img :src="userGoogle.photoURL" />
+        </q-avatar>
+        <div class="text-weight-bold">{{ userGoogle.displayName }}</div>
+        <div>{{ userGoogle.email }}</div>
+      </div>
+    </q-img>
   </q-drawer>
 </template>
 
@@ -38,7 +40,6 @@ import { ref, inject } from "vue";
 import { useQuasar } from "quasar";
 import { signInWithPopup, signOut, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../firebase";
-import UserAvatar from "./UserAvatar.vue";
 
 const $q = useQuasar();
 
