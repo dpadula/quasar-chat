@@ -1,6 +1,6 @@
 <script setup>
 import { inject, ref, nextTick, watchEffect } from "vue";
-import { scroll } from "quasar";
+import { scroll, date } from "quasar";
 import { collection, query, onSnapshot, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 
@@ -71,8 +71,10 @@ watchEffect((onCleanup) => {
             :name="message.displayName"
             :avatar="message.photoURL"
             :text="[message.text]"
+            :stamp="date.formatDate(message.time, 'HH:mm')"
             :sent="message.uid === userGoogle.uid"
           />
+          <!-- :stamp="date.formatDate(message.time, 'DD-MM-YYYY HH:mm:ss')" -->
         </template>
       </div>
     </div>
@@ -81,6 +83,12 @@ watchEffect((onCleanup) => {
 
 <!-- Notice lang="scss" -->
 <style lang="scss">
+.q-message-name {
+  font-weight: bold;
+}
+.q-message-stamp {
+  text-align: right !important;
+}
 @media screen and (max-width: $breakpoint-xs-max) {
   .anchoChat {
     min-width: 105vw !important;

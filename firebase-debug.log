@@ -1198,3 +1198,275 @@ Before we get started, keep in mind:
     at process.processTimers (node:internal/timers:507:7)
 [error] 
 [error] Error: An unexpected error has occurred.
+[debug] [2023-06-23T15:30:13.560Z] ----------------------------------------------------------------------
+[debug] [2023-06-23T15:30:13.562Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\dpadula\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2023-06-23T15:30:13.563Z] CLI Version:   12.4.0
+[debug] [2023-06-23T15:30:13.564Z] Platform:      win32
+[debug] [2023-06-23T15:30:13.564Z] Node Version:  v18.13.0
+[debug] [2023-06-23T15:30:13.566Z] Time:          Fri Jun 23 2023 12:30:13 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-06-23T15:30:13.566Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-23T15:30:13.571Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-06-23T15:30:13.669Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-23T15:30:13.669Z] > authorizing via signed-in user (diego.padula@gmail.com)
+[debug] [2023-06-23T15:30:13.669Z] [iam] checking project quasar-chat-3c992 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-06-23T15:30:13.671Z] > refreshing access token with scopes: []
+[debug] [2023-06-23T15:30:13.672Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-06-23T15:30:13.672Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-23T15:30:14.001Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-06-23T15:30:14.002Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-23T15:30:14.021Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/quasar-chat-3c992:testIamPermissions [none]
+[debug] [2023-06-23T15:30:14.022Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/quasar-chat-3c992:testIamPermissions x-goog-quota-user=projects/quasar-chat-3c992
+[debug] [2023-06-23T15:30:14.022Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/quasar-chat-3c992:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-23T15:30:14.304Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-06-23T15:30:14.304Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-06-23T15:30:15.162Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/quasar-chat-3c992:testIamPermissions 200
+[debug] [2023-06-23T15:30:15.163Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/quasar-chat-3c992:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-23T15:30:15.168Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/quasar-chat-3c992 [none]
+[debug] [2023-06-23T15:30:15.807Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/quasar-chat-3c992 200
+[debug] [2023-06-23T15:30:15.808Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/quasar-chat-3c992 {"projectId":"quasar-chat-3c992","projectNumber":"203624262350","displayName":"quasar-chat","name":"projects/quasar-chat-3c992","resources":{"hostingSite":"quasar-chat-3c992"},"state":"ACTIVE","etag":"1_f0f7459e-8b98-4fec-8a2a-5979caa80b36"}
+[info] 
+[info] === Deploying to 'quasar-chat-3c992'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-06-23T15:30:15.834Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions [none]
+[debug] [2023-06-23T15:30:15.834Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-06-23T15:30:17.372Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions 200
+[debug] [2023-06-23T15:30:17.373Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions {"name":"projects/203624262350/sites/quasar-chat-3c992/versions/146273dfb247e54c","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[quasar-chat-3c992]: beginning deploy... 
+[info] i  hosting[quasar-chat-3c992]: found 28 files in dist/spa 
+[debug] [2023-06-23T15:30:36.906Z] [hosting] uploading with 200 concurrency
+[debug] [2023-06-23T15:30:37.029Z] [hosting] hash cache [ZGlzdFxzcGE] stored for 28 files
+[debug] [2023-06-23T15:30:37.029Z] [hosting][hash queue][FINAL] {"max":44,"min":1,"avg":16.25,"active":0,"complete":28,"success":28,"errored":0,"retried":0,"total":28,"elapsed":53}
+[debug] [2023-06-23T15:30:37.030Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/203624262350/sites/quasar-chat-3c992/versions/146273dfb247e54c:populateFiles [none]
+[debug] [2023-06-23T15:30:37.031Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/203624262350/sites/quasar-chat-3c992/versions/146273dfb247e54c:populateFiles {"files":{"/favicon.ico":"19f515c282a02319e98f59fe00523099fdf73ce3e06b48492354b57cdf5cb5ff","/imessage_receive.mp3":"4b9a4c60a8f620e28b9088d574af51bba05388f5f57e6bfc11f4660f6756b833","/imessage_send.mp3":"676eea1641334d721e6a23e573795163f2a9e5b3349b5b74506177a4bcc6da01","/icons/favicon-128x128.png":"c6e9fd45db2c50c0ce234a3c845498e05640158a8268df61d4ddbecdc61b8995","/icons/favicon-16x16.png":"2957c6d3f4dbf6778db6ae2e0e6737f6c4bd07f7b504d101d81de2a6fb57b3b4","/icons/favicon-32x32.png":"fa10146a76ab2b54c831c385967e0f21b9b321ee7a6a24f7d409e4d6f4d60b6f","/icons/favicon-96x96.png":"70ccefa10e34389c7cf986ce465d6d27832a98ab1792b8ed51acc7f28369bc03","/index.html":"ca746731c8d4274d46f235dc94fcdfec66fac7de77c4f2e97f2d89d3ae86e13d","/assets/AboutPage.5948b048.js":"2d3d3595adffea3ae3fb12be0f41a3acd5b0a62a23b68f1c6d3580ec949470b5","/assets/ErrorNotFound.2e99d2ea.js":"53821925678504bfd9cd72b90a473b21f59bfe5ede93f03e7b6f4d63166300b7","/assets/axios.e765690c.js":"19451b54c5b7b45a24b1ea21dd9f99aa8060eceadd82b6a3f9e41539531f34f8","/assets/IndexPage.27e6184d.css":"9b415d1ad2ee767d3927a16c9193459771e378d8566b502f5d66a9ad941f55f0","/assets/IndexPage.bad113e9.js":"4968ac73af37b60f8f12adf94652a365e2c331556e5c0db5187b738ebf5e1c1a","/assets/QPage.22c67842.js":"d835f91edc9d7460f75728d0c64183de6687af26cca2d5bd11eca60efb29b89b","/assets/render.4dcd3121.js":"38061a8b4987b9aae971c028c446531aa2a907e33fdcb544a3d0fbd1f444d491","/assets/vm.065e6a9e.js":"c9d39fa9f0d39117640ed100e6a208c1708abe163a75fd4afe612ac4f1d0f7cc","/assets/QBtn.68596b80.js":"ce3af64bf7410b3affffb273e607138906f789828efb788bbab00adaebe7d8c8","/assets/KFOkCnqEu92Fr1MmgVxIIzQ.34e9582c.woff":"e187935867123b35d124bdcb50d055beacf77ab1faa4a1921a043ca821099d07","/assets/KFOlCnqEu92Fr1MmEU9fBBc-.9ce7f3ac.woff":"112014778cee35b534b468c55c6b47bd0ce07d3f136f43255733e351cff5dc8e","/assets/KFOlCnqEu92Fr1MmSU5fBBc-.bf14c7d7.woff":"16bb244c5b7182277b2f443e2216f024588eb4ac8d958aea7b88507f2d3d6e55","/assets/KFOlCnqEu92Fr1MmWUlfBBc-.e0fd57c0.woff":"0e345dc03075026e6ee24e96ebef539905a6d54ab47a114f0574603b9bc10244","/assets/KFOlCnqEu92Fr1MmYUtfBBc-.f6537e32.woff":"5af67f9b56d4fe0cc0454f5b983884330ff3cf79c2f131f3a9e724af57dba868","/assets/KFOmCnqEu92Fr1Mu4mxM.f2abf7fb.woff":"595988c2e008cc7663d539a03b0de1b86d567af7b814dd15457349d7fafa3527","/assets/MainLayout.ebfa1032.js":"ed222e63b700608522d3f8578f9401a945ea3f958ced0133d81c2bed0294f663","/assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.4a4dbc62.woff2":"6dcf907b4f9910f9b6259c6b7b1d82a42e2d140b068212f74115179ca9ac2ba6","/assets/index.8f27d84b.css":"14652619a37d8873de671b68639488da1e1e968db53bdd587aee088c9024d379","/assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.fd84f88b.woff":"1ffbcd5ac0a466a90b94d48bcc4789a9e536e3ed84280530228b29a3c8c92f30","/assets/index.981ea77e.js":"117fda401d7bd4cc40c7082baeccae29e0d4c974137b0ac15a2376da10063b32"}}
+[debug] [2023-06-23T15:30:38.043Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/203624262350/sites/quasar-chat-3c992/versions/146273dfb247e54c:populateFiles 200
+[debug] [2023-06-23T15:30:38.043Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/203624262350/sites/quasar-chat-3c992/versions/146273dfb247e54c:populateFiles {"uploadRequiredHashes":["53821925678504bfd9cd72b90a473b21f59bfe5ede93f03e7b6f4d63166300b7","117fda401d7bd4cc40c7082baeccae29e0d4c974137b0ac15a2376da10063b32","ca746731c8d4274d46f235dc94fcdfec66fac7de77c4f2e97f2d89d3ae86e13d","ce3af64bf7410b3affffb273e607138906f789828efb788bbab00adaebe7d8c8","ed222e63b700608522d3f8578f9401a945ea3f958ced0133d81c2bed0294f663","4968ac73af37b60f8f12adf94652a365e2c331556e5c0db5187b738ebf5e1c1a","19451b54c5b7b45a24b1ea21dd9f99aa8060eceadd82b6a3f9e41539531f34f8","2d3d3595adffea3ae3fb12be0f41a3acd5b0a62a23b68f1c6d3580ec949470b5","d835f91edc9d7460f75728d0c64183de6687af26cca2d5bd11eca60efb29b89b","9b415d1ad2ee767d3927a16c9193459771e378d8566b502f5d66a9ad941f55f0","38061a8b4987b9aae971c028c446531aa2a907e33fdcb544a3d0fbd1f444d491"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files"}
+[debug] [2023-06-23T15:30:38.046Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/53821925678504bfd9cd72b90a473b21f59bfe5ede93f03e7b6f4d63166300b7 [none]
+[debug] [2023-06-23T15:30:38.046Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/53821925678504bfd9cd72b90a473b21f59bfe5ede93f03e7b6f4d63166300b7 [stream]
+[debug] [2023-06-23T15:30:38.050Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/117fda401d7bd4cc40c7082baeccae29e0d4c974137b0ac15a2376da10063b32 [none]
+[debug] [2023-06-23T15:30:38.050Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/117fda401d7bd4cc40c7082baeccae29e0d4c974137b0ac15a2376da10063b32 [stream]
+[debug] [2023-06-23T15:30:38.052Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/ca746731c8d4274d46f235dc94fcdfec66fac7de77c4f2e97f2d89d3ae86e13d [none]
+[debug] [2023-06-23T15:30:38.052Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/ca746731c8d4274d46f235dc94fcdfec66fac7de77c4f2e97f2d89d3ae86e13d [stream]
+[debug] [2023-06-23T15:30:38.054Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/ce3af64bf7410b3affffb273e607138906f789828efb788bbab00adaebe7d8c8 [none]
+[debug] [2023-06-23T15:30:38.054Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/ce3af64bf7410b3affffb273e607138906f789828efb788bbab00adaebe7d8c8 [stream]
+[debug] [2023-06-23T15:30:38.054Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/ed222e63b700608522d3f8578f9401a945ea3f958ced0133d81c2bed0294f663 [none]
+[debug] [2023-06-23T15:30:38.055Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/ed222e63b700608522d3f8578f9401a945ea3f958ced0133d81c2bed0294f663 [stream]
+[debug] [2023-06-23T15:30:38.055Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/4968ac73af37b60f8f12adf94652a365e2c331556e5c0db5187b738ebf5e1c1a [none]
+[debug] [2023-06-23T15:30:38.055Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/4968ac73af37b60f8f12adf94652a365e2c331556e5c0db5187b738ebf5e1c1a [stream]
+[debug] [2023-06-23T15:30:38.056Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/19451b54c5b7b45a24b1ea21dd9f99aa8060eceadd82b6a3f9e41539531f34f8 [none]
+[debug] [2023-06-23T15:30:38.056Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/19451b54c5b7b45a24b1ea21dd9f99aa8060eceadd82b6a3f9e41539531f34f8 [stream]
+[debug] [2023-06-23T15:30:38.057Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/2d3d3595adffea3ae3fb12be0f41a3acd5b0a62a23b68f1c6d3580ec949470b5 [none]
+[debug] [2023-06-23T15:30:38.057Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/2d3d3595adffea3ae3fb12be0f41a3acd5b0a62a23b68f1c6d3580ec949470b5 [stream]
+[debug] [2023-06-23T15:30:38.058Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/d835f91edc9d7460f75728d0c64183de6687af26cca2d5bd11eca60efb29b89b [none]
+[debug] [2023-06-23T15:30:38.058Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/d835f91edc9d7460f75728d0c64183de6687af26cca2d5bd11eca60efb29b89b [stream]
+[debug] [2023-06-23T15:30:38.059Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/9b415d1ad2ee767d3927a16c9193459771e378d8566b502f5d66a9ad941f55f0 [none]
+[debug] [2023-06-23T15:30:38.059Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/9b415d1ad2ee767d3927a16c9193459771e378d8566b502f5d66a9ad941f55f0 [stream]
+[debug] [2023-06-23T15:30:38.059Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/38061a8b4987b9aae971c028c446531aa2a907e33fdcb544a3d0fbd1f444d491 [none]
+[debug] [2023-06-23T15:30:38.059Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/38061a8b4987b9aae971c028c446531aa2a907e33fdcb544a3d0fbd1f444d491 [stream]
+[debug] [2023-06-23T15:30:38.060Z] [hosting][populate queue][FINAL] {"max":1018,"min":1018,"avg":1018,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1032}
+[debug] [2023-06-23T15:30:38.060Z] [hosting] uploads queued: 11
+[debug] [2023-06-23T15:30:39.148Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/d835f91edc9d7460f75728d0c64183de6687af26cca2d5bd11eca60efb29b89b 200
+[debug] [2023-06-23T15:30:39.150Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/d835f91edc9d7460f75728d0c64183de6687af26cca2d5bd11eca60efb29b89b [stream]
+[debug] [2023-06-23T15:30:39.239Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/9b415d1ad2ee767d3927a16c9193459771e378d8566b502f5d66a9ad941f55f0 200
+[debug] [2023-06-23T15:30:39.239Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/9b415d1ad2ee767d3927a16c9193459771e378d8566b502f5d66a9ad941f55f0 [stream]
+[debug] [2023-06-23T15:30:39.242Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/4968ac73af37b60f8f12adf94652a365e2c331556e5c0db5187b738ebf5e1c1a 200
+[debug] [2023-06-23T15:30:39.242Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/4968ac73af37b60f8f12adf94652a365e2c331556e5c0db5187b738ebf5e1c1a [stream]
+[debug] [2023-06-23T15:30:39.254Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/ca746731c8d4274d46f235dc94fcdfec66fac7de77c4f2e97f2d89d3ae86e13d 200
+[debug] [2023-06-23T15:30:39.254Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/ca746731c8d4274d46f235dc94fcdfec66fac7de77c4f2e97f2d89d3ae86e13d [stream]
+[debug] [2023-06-23T15:30:39.297Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/ed222e63b700608522d3f8578f9401a945ea3f958ced0133d81c2bed0294f663 200
+[debug] [2023-06-23T15:30:39.300Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/ed222e63b700608522d3f8578f9401a945ea3f958ced0133d81c2bed0294f663 [stream]
+[debug] [2023-06-23T15:30:39.306Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/53821925678504bfd9cd72b90a473b21f59bfe5ede93f03e7b6f4d63166300b7 200
+[debug] [2023-06-23T15:30:39.306Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/53821925678504bfd9cd72b90a473b21f59bfe5ede93f03e7b6f4d63166300b7 [stream]
+[debug] [2023-06-23T15:30:39.450Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/ce3af64bf7410b3affffb273e607138906f789828efb788bbab00adaebe7d8c8 200
+[debug] [2023-06-23T15:30:39.451Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/ce3af64bf7410b3affffb273e607138906f789828efb788bbab00adaebe7d8c8 [stream]
+[debug] [2023-06-23T15:30:39.482Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/117fda401d7bd4cc40c7082baeccae29e0d4c974137b0ac15a2376da10063b32 200
+[debug] [2023-06-23T15:30:39.482Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/117fda401d7bd4cc40c7082baeccae29e0d4c974137b0ac15a2376da10063b32 [stream]
+[debug] [2023-06-23T15:30:40.157Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/38061a8b4987b9aae971c028c446531aa2a907e33fdcb544a3d0fbd1f444d491 200
+[debug] [2023-06-23T15:30:40.157Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/38061a8b4987b9aae971c028c446531aa2a907e33fdcb544a3d0fbd1f444d491 [stream]
+[debug] [2023-06-23T15:30:40.185Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/2d3d3595adffea3ae3fb12be0f41a3acd5b0a62a23b68f1c6d3580ec949470b5 200
+[debug] [2023-06-23T15:30:40.185Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/2d3d3595adffea3ae3fb12be0f41a3acd5b0a62a23b68f1c6d3580ec949470b5 [stream]
+[debug] [2023-06-23T15:30:40.312Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/19451b54c5b7b45a24b1ea21dd9f99aa8060eceadd82b6a3f9e41539531f34f8 200
+[debug] [2023-06-23T15:30:40.312Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/146273dfb247e54c/files/19451b54c5b7b45a24b1ea21dd9f99aa8060eceadd82b6a3f9e41539531f34f8 [stream]
+[debug] [2023-06-23T15:30:40.313Z] [hosting][upload queue][FINAL] {"max":2268,"min":1106,"avg":1508.090909090909,"active":0,"complete":11,"success":11,"errored":0,"retried":0,"total":11,"elapsed":2269}
+[info] +  hosting[quasar-chat-3c992]: file upload complete 
+[debug] [2023-06-23T15:30:40.319Z] [hosting] deploy completed after 3432ms
+[debug] [2023-06-23T15:30:40.321Z] [
+  {
+    "config": {
+      "public": "dist/spa",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "quasar-chat-3c992"
+    },
+    "version": "projects/203624262350/sites/quasar-chat-3c992/versions/146273dfb247e54c"
+  }
+]
+[info] i  hosting[quasar-chat-3c992]: finalizing version... 
+[debug] [2023-06-23T15:30:40.325Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions/146273dfb247e54c updateMask=status%2Cconfig
+[debug] [2023-06-23T15:30:40.325Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions/146273dfb247e54c {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-06-23T15:30:41.306Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions/146273dfb247e54c 200
+[debug] [2023-06-23T15:30:41.307Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions/146273dfb247e54c {"name":"projects/203624262350/sites/quasar-chat-3c992/versions/146273dfb247e54c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-23T15:30:17.484051Z","createUser":{"email":"diego.padula@gmail.com"},"finalizeTime":"2023-06-23T15:30:41.705444Z","finalizeUser":{"email":"diego.padula@gmail.com"}}
+[debug] [2023-06-23T15:30:41.307Z] [hosting] finalized version for quasar-chat-3c992:[object Object]
+[info] +  hosting[quasar-chat-3c992]: version finalized 
+[info] i  hosting[quasar-chat-3c992]: releasing new version... 
+[debug] [2023-06-23T15:30:41.308Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/channels/live/releases versionName=projects%2F203624262350%2Fsites%2Fquasar-chat-3c992%2Fversions%2F146273dfb247e54c
+[debug] [2023-06-23T15:30:41.308Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/channels/live/releases {}
+[debug] [2023-06-23T15:30:42.366Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/channels/live/releases 200
+[debug] [2023-06-23T15:30:42.366Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/channels/live/releases {"name":"projects/203624262350/sites/quasar-chat-3c992/channels/live/releases/1687534242196000","version":{"name":"projects/203624262350/sites/quasar-chat-3c992/versions/146273dfb247e54c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-23T15:30:17.484051Z","createUser":{"email":"diego.padula@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AD_cMMTRDJjIKNARWTsSWo-zTWQ_dHZmt7MPw2hnq_Wf"},"finalizeTime":"2023-06-23T15:30:41.705444Z","finalizeUser":{"email":"diego.padula@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AD_cMMTRDJjIKNARWTsSWo-zTWQ_dHZmt7MPw2hnq_Wf"}},"type":"DEPLOY","releaseTime":"2023-06-23T15:30:42.196Z","releaseUser":{"email":"diego.padula@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AD_cMMTRDJjIKNARWTsSWo-zTWQ_dHZmt7MPw2hnq_Wf"}}
+[debug] [2023-06-23T15:30:42.367Z] [hosting] release: {"name":"projects/203624262350/sites/quasar-chat-3c992/channels/live/releases/1687534242196000","version":{"name":"projects/203624262350/sites/quasar-chat-3c992/versions/146273dfb247e54c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-23T15:30:17.484051Z","createUser":{"email":"diego.padula@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AD_cMMTRDJjIKNARWTsSWo-zTWQ_dHZmt7MPw2hnq_Wf"},"finalizeTime":"2023-06-23T15:30:41.705444Z","finalizeUser":{"email":"diego.padula@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AD_cMMTRDJjIKNARWTsSWo-zTWQ_dHZmt7MPw2hnq_Wf"}},"type":"DEPLOY","releaseTime":"2023-06-23T15:30:42.196Z","releaseUser":{"email":"diego.padula@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AD_cMMTRDJjIKNARWTsSWo-zTWQ_dHZmt7MPw2hnq_Wf"}}
+[info] +  hosting[quasar-chat-3c992]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/quasar-chat-3c992/overview
+[info] Hosting URL: https://quasar-chat-3c992.web.app
+[debug] [2023-06-23T15:31:13.457Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\dpadula\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-06-23T16:13:12.727Z] ----------------------------------------------------------------------
+[debug] [2023-06-23T16:13:12.730Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\dpadula\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2023-06-23T16:13:12.731Z] CLI Version:   12.4.0
+[debug] [2023-06-23T16:13:12.732Z] Platform:      win32
+[debug] [2023-06-23T16:13:12.732Z] Node Version:  v18.13.0
+[debug] [2023-06-23T16:13:12.733Z] Time:          Fri Jun 23 2023 13:13:12 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-06-23T16:13:12.733Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-23T16:13:12.823Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-23T16:13:12.824Z] > authorizing via signed-in user (diego.padula@gmail.com)
+[debug] [2023-06-23T16:13:12.824Z] [iam] checking project quasar-chat-3c992 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-06-23T16:13:12.827Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/quasar-chat-3c992:testIamPermissions [none]
+[debug] [2023-06-23T16:13:12.828Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/quasar-chat-3c992:testIamPermissions x-goog-quota-user=projects/quasar-chat-3c992
+[debug] [2023-06-23T16:13:12.828Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/quasar-chat-3c992:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-23T16:13:13.896Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/quasar-chat-3c992:testIamPermissions 200
+[debug] [2023-06-23T16:13:13.897Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/quasar-chat-3c992:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-23T16:13:13.899Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/quasar-chat-3c992 [none]
+[debug] [2023-06-23T16:13:14.307Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/quasar-chat-3c992 200
+[debug] [2023-06-23T16:13:14.308Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/quasar-chat-3c992 {"projectId":"quasar-chat-3c992","projectNumber":"203624262350","displayName":"quasar-chat","name":"projects/quasar-chat-3c992","resources":{"hostingSite":"quasar-chat-3c992"},"state":"ACTIVE","etag":"1_b76ad58a-9ee2-4335-88ea-21efb64327ae"}
+[info] 
+[info] === Deploying to 'quasar-chat-3c992'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-06-23T16:13:14.325Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions [none]
+[debug] [2023-06-23T16:13:14.325Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-06-23T16:13:15.658Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions 200
+[debug] [2023-06-23T16:13:15.659Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions {"name":"projects/203624262350/sites/quasar-chat-3c992/versions/165876469128e15c","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[quasar-chat-3c992]: beginning deploy... 
+[info] i  hosting[quasar-chat-3c992]: found 29 files in dist/spa 
+[debug] [2023-06-23T16:13:35.394Z] [hosting] uploading with 200 concurrency
+[debug] [2023-06-23T16:13:35.456Z] [hosting] hash cache [ZGlzdFxzcGE] stored for 29 files
+[debug] [2023-06-23T16:13:35.456Z] [hosting][hash queue][FINAL] {"max":51,"min":0,"avg":17.586206896551722,"active":0,"complete":29,"success":29,"errored":0,"retried":0,"total":29,"elapsed":57}
+[debug] [2023-06-23T16:13:35.456Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/203624262350/sites/quasar-chat-3c992/versions/165876469128e15c:populateFiles [none]
+[debug] [2023-06-23T16:13:35.456Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/203624262350/sites/quasar-chat-3c992/versions/165876469128e15c:populateFiles {"files":{"/favicon.ico":"19f515c282a02319e98f59fe00523099fdf73ce3e06b48492354b57cdf5cb5ff","/imessage_receive.mp3":"4b9a4c60a8f620e28b9088d574af51bba05388f5f57e6bfc11f4660f6756b833","/imessage_send.mp3":"676eea1641334d721e6a23e573795163f2a9e5b3349b5b74506177a4bcc6da01","/icons/favicon-128x128.png":"c6e9fd45db2c50c0ce234a3c845498e05640158a8268df61d4ddbecdc61b8995","/icons/favicon-16x16.png":"2957c6d3f4dbf6778db6ae2e0e6737f6c4bd07f7b504d101d81de2a6fb57b3b4","/icons/favicon-32x32.png":"fa10146a76ab2b54c831c385967e0f21b9b321ee7a6a24f7d409e4d6f4d60b6f","/icons/favicon-96x96.png":"70ccefa10e34389c7cf986ce465d6d27832a98ab1792b8ed51acc7f28369bc03","/index.html":"8c47ee0c1417550b23ce02cf5f545aa81f81939e7553a395edb0699cd61fc5ac","/assets/AboutPage.2043a1e4.js":"31e0616f03955820e9a8b31a15074fd817f46edf5f112781ce91c2dea5fc9d0d","/assets/ErrorNotFound.2244c442.js":"7dd988b15c3750835cf0fbb2f5b92e595fab9361a7829e3a1044721be9565945","/assets/axios.d8800b07.js":"9140150ec6a8664495f06dd41d6659788f9cb306889d519e8a297ed83a83d921","/assets/format.e3cb4f10.js":"0d6feb2c3cd270f03d7ae974fbd1cce024d1a48cb6b220798842c6f2c96989dd","/assets/IndexPage.66e6adb1.css":"9d4f181346d9e5a835fffa030759f6d05d6d67c4eed8695124977078b67c6316","/assets/IndexPage.3b1dea67.js":"6736d023f864b26f7e97205f03ee054e764d34f8b5a37d1f9c7d95cc19ee2c20","/assets/QPage.3a2111a8.js":"c62d3d4249da12643ebd5f98cc9713c6e5fa6297e55d577d157d5f3a1eef16d4","/assets/render.612db8d1.js":"21e2fccc4068e65e29fa08ce5da21b9515cbca6f1da0355fa872c49e9b756dca","/assets/vm.065e6a9e.js":"c9d39fa9f0d39117640ed100e6a208c1708abe163a75fd4afe612ac4f1d0f7cc","/assets/QBtn.ac2e2ae8.js":"0aa0def32092249070230ad099b962c51f87511f99e01c2d50aa4c769458706d","/assets/KFOlCnqEu92Fr1MmEU9fBBc-.9ce7f3ac.woff":"112014778cee35b534b468c55c6b47bd0ce07d3f136f43255733e351cff5dc8e","/assets/KFOlCnqEu92Fr1MmSU5fBBc-.bf14c7d7.woff":"16bb244c5b7182277b2f443e2216f024588eb4ac8d958aea7b88507f2d3d6e55","/assets/KFOkCnqEu92Fr1MmgVxIIzQ.34e9582c.woff":"e187935867123b35d124bdcb50d055beacf77ab1faa4a1921a043ca821099d07","/assets/KFOlCnqEu92Fr1MmWUlfBBc-.e0fd57c0.woff":"0e345dc03075026e6ee24e96ebef539905a6d54ab47a114f0574603b9bc10244","/assets/KFOmCnqEu92Fr1Mu4mxM.f2abf7fb.woff":"595988c2e008cc7663d539a03b0de1b86d567af7b814dd15457349d7fafa3527","/assets/KFOlCnqEu92Fr1MmYUtfBBc-.f6537e32.woff":"5af67f9b56d4fe0cc0454f5b983884330ff3cf79c2f131f3a9e724af57dba868","/assets/MainLayout.2237f424.js":"12931473a45428dae837b02a1c34a841a0b2ef778f98c84e5d62fbcd6b52b035","/assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.4a4dbc62.woff2":"6dcf907b4f9910f9b6259c6b7b1d82a42e2d140b068212f74115179ca9ac2ba6","/assets/index.8f27d84b.css":"14652619a37d8873de671b68639488da1e1e968db53bdd587aee088c9024d379","/assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.fd84f88b.woff":"1ffbcd5ac0a466a90b94d48bcc4789a9e536e3ed84280530228b29a3c8c92f30","/assets/index.708a08fe.js":"e4540153b528ebdf376d85ad8e1b503fb2f29d215377e4ebc31a18b1dee3123e"}}
+[debug] [2023-06-23T16:13:36.507Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/203624262350/sites/quasar-chat-3c992/versions/165876469128e15c:populateFiles 200
+[debug] [2023-06-23T16:13:36.507Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/203624262350/sites/quasar-chat-3c992/versions/165876469128e15c:populateFiles {"uploadRequiredHashes":["21e2fccc4068e65e29fa08ce5da21b9515cbca6f1da0355fa872c49e9b756dca","6736d023f864b26f7e97205f03ee054e764d34f8b5a37d1f9c7d95cc19ee2c20","31e0616f03955820e9a8b31a15074fd817f46edf5f112781ce91c2dea5fc9d0d","0aa0def32092249070230ad099b962c51f87511f99e01c2d50aa4c769458706d","e4540153b528ebdf376d85ad8e1b503fb2f29d215377e4ebc31a18b1dee3123e","9d4f181346d9e5a835fffa030759f6d05d6d67c4eed8695124977078b67c6316","7dd988b15c3750835cf0fbb2f5b92e595fab9361a7829e3a1044721be9565945","0d6feb2c3cd270f03d7ae974fbd1cce024d1a48cb6b220798842c6f2c96989dd","9140150ec6a8664495f06dd41d6659788f9cb306889d519e8a297ed83a83d921","12931473a45428dae837b02a1c34a841a0b2ef778f98c84e5d62fbcd6b52b035","8c47ee0c1417550b23ce02cf5f545aa81f81939e7553a395edb0699cd61fc5ac","c62d3d4249da12643ebd5f98cc9713c6e5fa6297e55d577d157d5f3a1eef16d4"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files"}
+[debug] [2023-06-23T16:13:36.510Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/21e2fccc4068e65e29fa08ce5da21b9515cbca6f1da0355fa872c49e9b756dca [none]
+[debug] [2023-06-23T16:13:36.510Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/21e2fccc4068e65e29fa08ce5da21b9515cbca6f1da0355fa872c49e9b756dca [stream]
+[debug] [2023-06-23T16:13:36.511Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/6736d023f864b26f7e97205f03ee054e764d34f8b5a37d1f9c7d95cc19ee2c20 [none]
+[debug] [2023-06-23T16:13:36.511Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/6736d023f864b26f7e97205f03ee054e764d34f8b5a37d1f9c7d95cc19ee2c20 [stream]
+[debug] [2023-06-23T16:13:36.512Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/31e0616f03955820e9a8b31a15074fd817f46edf5f112781ce91c2dea5fc9d0d [none]
+[debug] [2023-06-23T16:13:36.512Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/31e0616f03955820e9a8b31a15074fd817f46edf5f112781ce91c2dea5fc9d0d [stream]
+[debug] [2023-06-23T16:13:36.514Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/0aa0def32092249070230ad099b962c51f87511f99e01c2d50aa4c769458706d [none]
+[debug] [2023-06-23T16:13:36.515Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/0aa0def32092249070230ad099b962c51f87511f99e01c2d50aa4c769458706d [stream]
+[debug] [2023-06-23T16:13:36.516Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/e4540153b528ebdf376d85ad8e1b503fb2f29d215377e4ebc31a18b1dee3123e [none]
+[debug] [2023-06-23T16:13:36.517Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/e4540153b528ebdf376d85ad8e1b503fb2f29d215377e4ebc31a18b1dee3123e [stream]
+[debug] [2023-06-23T16:13:36.518Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/9d4f181346d9e5a835fffa030759f6d05d6d67c4eed8695124977078b67c6316 [none]
+[debug] [2023-06-23T16:13:36.518Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/9d4f181346d9e5a835fffa030759f6d05d6d67c4eed8695124977078b67c6316 [stream]
+[debug] [2023-06-23T16:13:36.519Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/7dd988b15c3750835cf0fbb2f5b92e595fab9361a7829e3a1044721be9565945 [none]
+[debug] [2023-06-23T16:13:36.519Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/7dd988b15c3750835cf0fbb2f5b92e595fab9361a7829e3a1044721be9565945 [stream]
+[debug] [2023-06-23T16:13:36.520Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/0d6feb2c3cd270f03d7ae974fbd1cce024d1a48cb6b220798842c6f2c96989dd [none]
+[debug] [2023-06-23T16:13:36.520Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/0d6feb2c3cd270f03d7ae974fbd1cce024d1a48cb6b220798842c6f2c96989dd [stream]
+[debug] [2023-06-23T16:13:36.521Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/9140150ec6a8664495f06dd41d6659788f9cb306889d519e8a297ed83a83d921 [none]
+[debug] [2023-06-23T16:13:36.521Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/9140150ec6a8664495f06dd41d6659788f9cb306889d519e8a297ed83a83d921 [stream]
+[debug] [2023-06-23T16:13:36.523Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/12931473a45428dae837b02a1c34a841a0b2ef778f98c84e5d62fbcd6b52b035 [none]
+[debug] [2023-06-23T16:13:36.523Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/12931473a45428dae837b02a1c34a841a0b2ef778f98c84e5d62fbcd6b52b035 [stream]
+[debug] [2023-06-23T16:13:36.523Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/8c47ee0c1417550b23ce02cf5f545aa81f81939e7553a395edb0699cd61fc5ac [none]
+[debug] [2023-06-23T16:13:36.523Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/8c47ee0c1417550b23ce02cf5f545aa81f81939e7553a395edb0699cd61fc5ac [stream]
+[debug] [2023-06-23T16:13:36.524Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/c62d3d4249da12643ebd5f98cc9713c6e5fa6297e55d577d157d5f3a1eef16d4 [none]
+[debug] [2023-06-23T16:13:36.524Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/c62d3d4249da12643ebd5f98cc9713c6e5fa6297e55d577d157d5f3a1eef16d4 [stream]
+[debug] [2023-06-23T16:13:36.525Z] [hosting][populate queue][FINAL] {"max":1055,"min":1055,"avg":1055,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1071}
+[debug] [2023-06-23T16:13:36.525Z] [hosting] uploads queued: 12
+[debug] [2023-06-23T16:13:37.428Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/0d6feb2c3cd270f03d7ae974fbd1cce024d1a48cb6b220798842c6f2c96989dd 200
+[debug] [2023-06-23T16:13:37.428Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/0d6feb2c3cd270f03d7ae974fbd1cce024d1a48cb6b220798842c6f2c96989dd [stream]
+[debug] [2023-06-23T16:13:37.561Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/9140150ec6a8664495f06dd41d6659788f9cb306889d519e8a297ed83a83d921 200
+[debug] [2023-06-23T16:13:37.561Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/9140150ec6a8664495f06dd41d6659788f9cb306889d519e8a297ed83a83d921 [stream]
+[debug] [2023-06-23T16:13:37.576Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/31e0616f03955820e9a8b31a15074fd817f46edf5f112781ce91c2dea5fc9d0d 200
+[debug] [2023-06-23T16:13:37.576Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/31e0616f03955820e9a8b31a15074fd817f46edf5f112781ce91c2dea5fc9d0d [stream]
+[debug] [2023-06-23T16:13:37.600Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/0aa0def32092249070230ad099b962c51f87511f99e01c2d50aa4c769458706d 200
+[debug] [2023-06-23T16:13:37.601Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/0aa0def32092249070230ad099b962c51f87511f99e01c2d50aa4c769458706d [stream]
+[debug] [2023-06-23T16:13:37.638Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/6736d023f864b26f7e97205f03ee054e764d34f8b5a37d1f9c7d95cc19ee2c20 200
+[debug] [2023-06-23T16:13:37.638Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/6736d023f864b26f7e97205f03ee054e764d34f8b5a37d1f9c7d95cc19ee2c20 [stream]
+[debug] [2023-06-23T16:13:37.668Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/12931473a45428dae837b02a1c34a841a0b2ef778f98c84e5d62fbcd6b52b035 200
+[debug] [2023-06-23T16:13:37.668Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/12931473a45428dae837b02a1c34a841a0b2ef778f98c84e5d62fbcd6b52b035 [stream]
+[debug] [2023-06-23T16:13:38.324Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/7dd988b15c3750835cf0fbb2f5b92e595fab9361a7829e3a1044721be9565945 200
+[debug] [2023-06-23T16:13:38.324Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/7dd988b15c3750835cf0fbb2f5b92e595fab9361a7829e3a1044721be9565945 [stream]
+[debug] [2023-06-23T16:13:38.386Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/9d4f181346d9e5a835fffa030759f6d05d6d67c4eed8695124977078b67c6316 200
+[debug] [2023-06-23T16:13:38.386Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/9d4f181346d9e5a835fffa030759f6d05d6d67c4eed8695124977078b67c6316 [stream]
+[debug] [2023-06-23T16:13:38.400Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/c62d3d4249da12643ebd5f98cc9713c6e5fa6297e55d577d157d5f3a1eef16d4 200
+[debug] [2023-06-23T16:13:38.400Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/c62d3d4249da12643ebd5f98cc9713c6e5fa6297e55d577d157d5f3a1eef16d4 [stream]
+[debug] [2023-06-23T16:13:38.416Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/8c47ee0c1417550b23ce02cf5f545aa81f81939e7553a395edb0699cd61fc5ac 200
+[debug] [2023-06-23T16:13:38.417Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/8c47ee0c1417550b23ce02cf5f545aa81f81939e7553a395edb0699cd61fc5ac [stream]
+[debug] [2023-06-23T16:13:38.438Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/21e2fccc4068e65e29fa08ce5da21b9515cbca6f1da0355fa872c49e9b756dca 200
+[debug] [2023-06-23T16:13:38.438Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/21e2fccc4068e65e29fa08ce5da21b9515cbca6f1da0355fa872c49e9b756dca [stream]
+[debug] [2023-06-23T16:13:38.452Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/e4540153b528ebdf376d85ad8e1b503fb2f29d215377e4ebc31a18b1dee3123e 200
+[debug] [2023-06-23T16:13:38.452Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/quasar-chat-3c992/versions/165876469128e15c/files/e4540153b528ebdf376d85ad8e1b503fb2f29d215377e4ebc31a18b1dee3123e [stream]
+[debug] [2023-06-23T16:13:38.452Z] [hosting][upload queue][FINAL] {"max":1944,"min":920,"avg":1482.5,"active":0,"complete":12,"success":12,"errored":0,"retried":0,"total":12,"elapsed":1945}
+[info] +  hosting[quasar-chat-3c992]: file upload complete 
+[debug] [2023-06-23T16:13:38.454Z] [hosting] deploy completed after 3078ms
+[debug] [2023-06-23T16:13:38.456Z] [
+  {
+    "config": {
+      "public": "dist/spa",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "quasar-chat-3c992"
+    },
+    "version": "projects/203624262350/sites/quasar-chat-3c992/versions/165876469128e15c"
+  }
+]
+[info] i  hosting[quasar-chat-3c992]: finalizing version... 
+[debug] [2023-06-23T16:13:38.459Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions/165876469128e15c updateMask=status%2Cconfig
+[debug] [2023-06-23T16:13:38.460Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions/165876469128e15c {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-06-23T16:13:39.452Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions/165876469128e15c 200
+[debug] [2023-06-23T16:13:39.452Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/versions/165876469128e15c {"name":"projects/203624262350/sites/quasar-chat-3c992/versions/165876469128e15c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-23T16:13:15.754615Z","createUser":{"email":"diego.padula@gmail.com"},"finalizeTime":"2023-06-23T16:13:39.864622Z","finalizeUser":{"email":"diego.padula@gmail.com"}}
+[debug] [2023-06-23T16:13:39.452Z] [hosting] finalized version for quasar-chat-3c992:[object Object]
+[info] +  hosting[quasar-chat-3c992]: version finalized 
+[info] i  hosting[quasar-chat-3c992]: releasing new version... 
+[debug] [2023-06-23T16:13:39.453Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/channels/live/releases versionName=projects%2F203624262350%2Fsites%2Fquasar-chat-3c992%2Fversions%2F165876469128e15c
+[debug] [2023-06-23T16:13:39.454Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/channels/live/releases {}
+[debug] [2023-06-23T16:13:40.517Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/channels/live/releases 200
+[debug] [2023-06-23T16:13:40.517Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/quasar-chat-3c992/channels/live/releases {"name":"projects/203624262350/sites/quasar-chat-3c992/channels/live/releases/1687536820371000","version":{"name":"projects/203624262350/sites/quasar-chat-3c992/versions/165876469128e15c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-23T16:13:15.754615Z","createUser":{"email":"diego.padula@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AD_cMMTRDJjIKNARWTsSWo-zTWQ_dHZmt7MPw2hnq_Wf"},"finalizeTime":"2023-06-23T16:13:39.864622Z","finalizeUser":{"email":"diego.padula@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AD_cMMTRDJjIKNARWTsSWo-zTWQ_dHZmt7MPw2hnq_Wf"}},"type":"DEPLOY","releaseTime":"2023-06-23T16:13:40.371Z","releaseUser":{"email":"diego.padula@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AD_cMMTRDJjIKNARWTsSWo-zTWQ_dHZmt7MPw2hnq_Wf"}}
+[debug] [2023-06-23T16:13:40.517Z] [hosting] release: {"name":"projects/203624262350/sites/quasar-chat-3c992/channels/live/releases/1687536820371000","version":{"name":"projects/203624262350/sites/quasar-chat-3c992/versions/165876469128e15c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-23T16:13:15.754615Z","createUser":{"email":"diego.padula@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AD_cMMTRDJjIKNARWTsSWo-zTWQ_dHZmt7MPw2hnq_Wf"},"finalizeTime":"2023-06-23T16:13:39.864622Z","finalizeUser":{"email":"diego.padula@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AD_cMMTRDJjIKNARWTsSWo-zTWQ_dHZmt7MPw2hnq_Wf"}},"type":"DEPLOY","releaseTime":"2023-06-23T16:13:40.371Z","releaseUser":{"email":"diego.padula@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AD_cMMTRDJjIKNARWTsSWo-zTWQ_dHZmt7MPw2hnq_Wf"}}
+[info] +  hosting[quasar-chat-3c992]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/quasar-chat-3c992/overview
+[info] Hosting URL: https://quasar-chat-3c992.web.app
+[debug] [2023-06-23T16:14:11.607Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\dpadula\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
